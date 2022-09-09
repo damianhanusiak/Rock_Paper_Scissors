@@ -96,6 +96,8 @@ function resetResults() {
     gamesLosses.textContent = 0;
     gamesDraws.textContent = 0;
     whoWin.textContent = '';
+    playerChoice.textContent = '';
+    computerChoice.textContent = '';
 }
 
 function startGame() {
