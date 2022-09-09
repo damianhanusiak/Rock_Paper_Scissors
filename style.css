@@ -18,20 +18,23 @@ nav {
     font-size: 42px;
 }
 
-.select {
-    overflow: hidden;
+.game h3 {
     text-align: center;
-    margin: 0 auto;
+    font-size: 32px;
 }
 
-.select h3 {
-    font-size: 32px;
+.select {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .select i {
     width: 200px;
     margin: 100px 40px;
-    font-size: 150px;
+    font-size: 180px;
 }
 
 button {
@@ -47,10 +50,18 @@ button {
     cursor: pointer;
 }
 
+.reset {
+    font-size: 15px;
+}
+
 button:hover {
     background-color: black;
     border: 2px solid white;
     color: white
+}
+
+.panels {
+    display: flex;
 }
 
 .panel-left,
@@ -68,6 +79,27 @@ h3 {
 
 p {
     font-size: 20px;
+}
+
+.numbers span {
+    color: royalblue;
+}
+
+.wins span {
+    color: green;
+}
+
+.losses span {
+    color: red;
+}
+
+.draws span {
+    color: orange;
+}
+
+.game p.whoiswin {
+    text-align: center;
+    font-size: 40px;
 }
 
 footer {

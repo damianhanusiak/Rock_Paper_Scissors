@@ -1,6 +1,6 @@
 // nav - text typing
 const navText = document.querySelector('h1');
-const text = '"rock, paper, scissors" game...';
+const text = '"rock, paper, scissors" game';
 let indexText = 0;
 const time = 200;
 
@@ -30,6 +30,7 @@ const game = {
 // Variables
 const hands = [...document.querySelectorAll('.select i')];
 const startBtn = document.querySelector('button');
+const resetBtn = document.querySelector('.reset');
 let playerChoice = document.querySelector('[data-summary="your-choice"]');
 let computerChoice = document.querySelector('[data-summary="computer-choice"]');
 let gamesNumber = document.querySelector('p.numbers span');
@@ -89,6 +90,14 @@ function endGame() {
     game.computerHand = '';
 }
 
+function resetResults() {
+    gamesNumber.textContent = 0;
+    gamesWins.textContent = 0;
+    gamesLosses.textContent = 0;
+    gamesDraws.textContent = 0;
+    whoWin.textContent = '';
+}
+
 function startGame() {
     game.computerHand = selectComputerHand();
     const result = checkResult(game.playerHand, game.computerHand);
@@ -99,3 +108,4 @@ function startGame() {
 
 hands.forEach(hand => hand.addEventListener('click', selectPlayerHand));
 startBtn.addEventListener('click', startGame);
+resetBtn.addEventListener('click', resetResults);

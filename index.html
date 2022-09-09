@@ -20,28 +20,32 @@
     </nav>
 
     <div class="game darktheme">
+        <h3>Choose your hand:</h3>
         <div class="select">
-            <h3>Choose your hand:</h3>
             <i data-option="rock" class="fa-regular fa-hand-back-fist"></i>
             <i data-option="paper" class="fa-regular fa-hand"></i>
             <i data-option="scissors" class="fa-regular fa-hand-scissors"></i>
         </div>
 
         <button class="start">Let's play!</button>
+        <p class="whoiswin"><span data-summary="winner"></span></p>
 
-        <div class="panel-left">
-            <h3>Game results:</h3>
-            <p>Your choice: <span data-summary="your-choice"></span></p>
-            <p>Computer choice: <span data-summary="computer-choice"></span></p>
-            <p>Winner: <span data-summary="winner"></span></p>
-        </div>
+        <div class="panels">
+            <div class="panel-left">
+                <h3>Game results:</h3>
+                <p>Your choice: <span data-summary="your-choice"></span></p>
+                <p>Computer choice: <span data-summary="computer-choice"></span></p>
 
-        <div class="panel-right">
-            <h3>Current results:</h3>
-            <p class="numbers">Number of games: <span>0</span></p>
-            <p class="wins">Wins: <span>0</span></p>
-            <p class="losses">Losses: <span>0</span></p>
-            <p class="draws">Draws: <span>0</span></p>
+            </div>
+
+            <div class="panel-right">
+                <h3>Current results:</h3>
+                <p class="numbers">Number of games: <span>0</span></p>
+                <p class="wins">Wins: <span>0</span></p>
+                <p class="losses">Losses: <span>0</span></p>
+                <p class="draws">Draws: <span>0</span></p>
+                <button class="reset">Reset results</button>
+            </div>
         </div>
     </div>
 
