@@ -11,11 +11,25 @@
     color: white;
 }
 
+.lighttheme {
+    background-color: white;
+    color: black;
+}
+
 nav {
+    position: relative;
     text-align: center;
     line-height: 30vh;
     text-transform: uppercase;
     font-size: 42px;
+}
+
+nav i {
+    display: block;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    cursor: pointer;
 }
 
 .game h3 {
@@ -37,7 +51,8 @@ nav {
     font-size: 180px;
 }
 
-button {
+button.start,
+button.reset {
     display: block;
     padding: 7px 25px;
     border: 2px solid black;
@@ -50,11 +65,24 @@ button {
     cursor: pointer;
 }
 
-.reset {
+button.light {
+    background-color: black;
+    color: white;
+}
+
+.start.light:hover,
+.reset.light:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+button.reset {
     font-size: 15px;
 }
 
-button:hover {
+button.start:hover,
+button.reset:hover {
     background-color: black;
     border: 2px solid white;
     color: white
@@ -108,7 +136,7 @@ footer {
     font-size: 22px;
 }
 
-@media (max-width: 420px) and (orientation: portrait) {
+@media (min-width: 360px) and (orientation: portrait) {
     nav {
         font-size: 17px;
         line-height: 15vh;
@@ -132,4 +160,41 @@ footer {
         font-size: 14px;
     }
 
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    nav {
+        font-size: 34px;
+        line-height: 20vh;
+    }
+
+    .game {
+        min-height: 73vh;
+    }
+
+    .game h3 {
+        font-size: 28px;
+    }
+
+    .select {
+        flex-direction: row;
+    }
+
+    .select i {
+        width: 120px;
+        margin: 100px 40px;
+        font-size: 120px;
+    }
+}
+
+@media (max-width: 740px) and (orientation: landscape) {
+    nav {
+        font-size: 30px;
+    }
+
+    .select i {
+        width: 120px;
+        margin: 100px 40px;
+        font-size: 130px;
+    }
 }

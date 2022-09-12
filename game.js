@@ -29,7 +29,7 @@ const game = {
 
 // Variables
 const hands = [...document.querySelectorAll('.select i')];
-const startBtn = document.querySelector('button');
+const startBtn = document.querySelector('.start');
 const resetBtn = document.querySelector('.reset');
 let playerChoice = document.querySelector('[data-summary="your-choice"]');
 let computerChoice = document.querySelector('[data-summary="computer-choice"]');
@@ -111,3 +111,20 @@ function startGame() {
 hands.forEach(hand => hand.addEventListener('click', selectPlayerHand));
 startBtn.addEventListener('click', startGame);
 resetBtn.addEventListener('click', resetResults);
+
+// switching theme 
+const switchBtn = document.getElementById('switch');
+const nav = document.querySelector('nav');
+const content = document.querySelector('.game');
+const footer = document.querySelector('footer');
+
+function switchTheme() {
+    nav.classList.toggle('lighttheme');
+    content.classList.toggle('lighttheme');
+    footer.classList.toggle('lighttheme');
+    startBtn.classList.toggle('light');
+    resetBtn.classList.toggle('light');
+    switchBtn.classList.toggle("fa-toggle-on");
+}
+
+switchBtn.addEventListener('click', switchTheme);
